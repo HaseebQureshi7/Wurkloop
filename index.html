@@ -12,9 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="scroll-progress"></div>
     <div class="animated-bg"></div>
 
     <!-- Navigation -->
@@ -33,22 +34,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="floating-elements">
-        <div class="floating-element">
-          <i class="fas fa-code" style="font-size: 3rem"></i>
-        </div>
-        <div class="floating-element">
-          <i class="fas fa-cogs" style="font-size: 2.5rem"></i>
-        </div>
-        <div class="floating-element">
-          <i class="fas fa-rocket" style="font-size: 3.5rem"></i>
-        </div>
+      <div class="floating-orbs">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
       </div>
       <div class="hero-content">
-        <!-- <h1>Global Innovative Tech</h1> -->
-        <div class="subtitle">
-          WE ARE A DIGITAL INNVOATION & ENGINEERING STUDIO.
-        </div>
+        <h1>Automate Your Business with Wurkloop</h1>
+        <div class="subtitle"></div>
         <p>
           Building intelligent software, automation systems, and tools that
           power the future of business.
@@ -60,69 +53,87 @@
     <!-- Services Section -->
     <section id="services" class="services">
       <div class="container">
-        <h2 class="section-title fade-in">Our Services</h2>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-robot"></i>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          Comprehensive solutions tailored to accelerate your business
+          transformation
+        </p>
+
+        <div class="carousel-container">
+          <div class="carousel-track" id="services-track">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>Custom Automations</h3>
+              <p>
+                Streamline your business processes with intelligent automation
+                solutions that reduce manual work and increase productivity by
+                up to 80%.
+              </p>
             </div>
-            <h3>Custom Automations</h3>
-            <p>
-              Streamline your business processes with intelligent automation
-              solutions that reduce manual work and increase productivity by up
-              to 80%.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-laptop-code"></i>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Software Development</h3>
+              <p>
+                Full-stack development services from web applications to mobile
+                apps, built with modern technologies and best practices.
+              </p>
             </div>
-            <h3>Software Development</h3>
-            <p>
-              Full-stack development services from web applications to mobile
-              apps, built with modern technologies and best practices.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-tools"></i>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Engineering Solutions</h3>
+              <p>
+                Comprehensive engineering services including system
+                architecture, DevOps, cloud solutions, and technical consulting.
+              </p>
             </div>
-            <h3>Engineering Solutions</h3>
-            <p>
-              Comprehensive engineering services including system architecture,
-              DevOps, cloud solutions, and technical consulting.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-chart-line"></i>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Digital Transformation</h3>
+              <p>
+                Guide your business through digital transformation with
+                strategic planning and implementation of modern technologies.
+              </p>
             </div>
-            <h3>Digital Transformation</h3>
-            <p>
-              Guide your business through digital transformation with strategic
-              planning and implementation of modern technologies.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-shield-alt"></i>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cybersecurity</h3>
+              <p>
+                Protect your digital assets with comprehensive security audits,
+                implementation, and ongoing monitoring services.
+              </p>
             </div>
-            <h3>Cybersecurity</h3>
-            <p>
-              Protect your digital assets with comprehensive security audits,
-              implementation, and ongoing monitoring services.
-            </p>
-          </div>
-          <div class="service-card fade-in">
-            <div class="service-icon">
-              <i class="fas fa-brain"></i>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>AI & Machine Learning</h3>
+              <p>
+                Leverage artificial intelligence and machine learning to gain
+                insights, automate decisions, and create intelligent solutions.
+              </p>
             </div>
-            <h3>AI & Machine Learning</h3>
-            <p>
-              Leverage artificial intelligence and machine learning to gain
-              insights, automate decisions, and create intelligent solutions.
-            </p>
           </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="services-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn" id="services-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="carousel-dots" id="services-dots"></div>
         </div>
       </div>
     </section>
@@ -130,121 +141,135 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title fade-in">Past Client Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-shopping-cart"></i>
+        <h2 class="section-title">Past Client Projects</h2>
+        <p class="section-subtitle">
+          Showcasing our expertise through successful client partnerships and
+          innovative solutions
+        </p>
+
+        <div class="carousel-container">
+          <div class="carousel-track" id="projects-track">
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Platform</h3>
+                <p class="project-description">
+                  Built a comprehensive e-commerce solution with automated
+                  inventory management, payment processing, and customer
+                  analytics.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Stripe</span>
+                </div>
+              </div>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">E-Commerce Platform</h3>
-              <p class="project-description">
-                Built a comprehensive e-commerce solution with automated
-                inventory management, payment processing, and customer analytics
-                for a retail chain.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">Stripe</span>
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Healthcare Management</h3>
+                <p class="project-description">
+                  Developed a complete hospital management system with patient
+                  records, appointment scheduling, and automated billing.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Docker</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-industry"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Manufacturing Automation</h3>
+                <p class="project-description">
+                  Implemented IoT-based automation system reducing production
+                  time by 40% and improving quality control.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">IoT</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">ML</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Learning Management</h3>
+                <p class="project-description">
+                  Created an interactive LMS with video streaming, progress
+                  tracking, and automated assessment tools.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Angular</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">WebRTC</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Business Intelligence</h3>
+                <p class="project-description">
+                  Built real-time analytics dashboard with predictive insights
+                  and automated reporting capabilities.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">D3.js</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Kafka</span>
+                  <span class="tech-tag">Elastic</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Mobile Banking App</h3>
+                <p class="project-description">
+                  Developed secure mobile banking application with biometric
+                  authentication and AI-powered fraud detection.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Blockchain</span>
+                  <span class="tech-tag">AI</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-hospital"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Healthcare Management System</h3>
-              <p class="project-description">
-                Developed a complete hospital management system with patient
-                records, appointment scheduling, and automated billing
-                processes.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Docker</span>
-              </div>
-            </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="projects-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn" id="projects-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-industry"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Manufacturing Automation</h3>
-              <p class="project-description">
-                Implemented IoT-based automation system for a manufacturing
-                plant, reducing production time by 40% and improving quality
-                control.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">IoT</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Machine Learning</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Learning Management System</h3>
-              <p class="project-description">
-                Created an interactive LMS with video streaming, progress
-                tracking, and automated assessment tools for an educational
-                institution.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Angular</span>
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">WebRTC</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Business Intelligence Dashboard</h3>
-              <p class="project-description">
-                Built real-time analytics dashboard with predictive insights and
-                automated reporting for a financial services company.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">D3.js</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Apache Kafka</span>
-                <span class="tech-tag">Elasticsearch</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card fade-in">
-            <div class="project-image">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Mobile Banking App</h3>
-              <p class="project-description">
-                Developed secure mobile banking application with biometric
-                authentication, real-time transactions, and AI-powered fraud
-                detection.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Blockchain</span>
-                <span class="tech-tag">TensorFlow</span>
-              </div>
-            </div>
-          </div>
+
+          <div class="carousel-dots" id="projects-dots"></div>
         </div>
       </div>
     </section>
@@ -252,72 +277,90 @@
     <!-- Products Section -->
     <section id="products" class="products">
       <div class="container">
-        <h2 class="section-title fade-in">Our Products</h2>
-        <div class="products-grid">
-          <div class="product-card fade-in">
-            <div class="product-icon">
-              <i class="fas fa-sync-alt"></i>
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">
+          Innovative solutions designed to streamline operations and drive
+          business growth
+        </p>
+
+        <div class="carousel-container">
+          <div class="carousel-track" id="products-track">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <h3>AutoFlow Pro</h3>
+              <p>
+                Advanced workflow automation platform that integrates with 500+
+                applications and reduces manual tasks by up to 90%.
+              </p>
+              <ul style="text-align: left; margin-top: 1rem">
+                <li>Visual workflow builder</li>
+                <li>Real-time monitoring</li>
+                <li>Custom integrations</li>
+                <li>Analytics dashboard</li>
+              </ul>
             </div>
-            <h3>AutoFlow Pro</h3>
-            <p>
-              Advanced workflow automation platform that integrates with 500+
-              applications and reduces manual tasks by up to 90%.
-            </p>
-            <ul style="text-align: left; margin-top: 1rem">
-              <li>Visual workflow builder</li>
-              <li>Real-time monitoring</li>
-              <li>Custom integrations</li>
-              <li>Analytics dashboard</li>
-            </ul>
-          </div>
-          <div class="product-card fade-in">
-            <div class="product-icon">
-              <i class="fas fa-cloud"></i>
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3>CloudSync Enterprise</h3>
+              <p>
+                Comprehensive cloud management solution for multi-cloud
+                environments with automated scaling and cost optimization.
+              </p>
+              <ul style="text-align: left; margin-top: 1rem">
+                <li>Multi-cloud support</li>
+                <li>Auto-scaling</li>
+                <li>Cost optimization</li>
+                <li>Security monitoring</li>
+              </ul>
             </div>
-            <h3>CloudSync Enterprise</h3>
-            <p>
-              Comprehensive cloud management solution for multi-cloud
-              environments with automated scaling and cost optimization.
-            </p>
-            <ul style="text-align: left; margin-top: 1rem">
-              <li>Multi-cloud support</li>
-              <li>Auto-scaling</li>
-              <li>Cost optimization</li>
-              <li>Security monitoring</li>
-            </ul>
-          </div>
-          <div class="product-card fade-in">
-            <div class="product-icon">
-              <i class="fas fa-eye"></i>
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>InsightAI Analytics</h3>
+              <p>
+                AI-powered business intelligence platform that provides
+                predictive analytics and automated insights from your data.
+              </p>
+              <ul style="text-align: left; margin-top: 1rem">
+                <li>Predictive modeling</li>
+                <li>Real-time analytics</li>
+                <li>Custom dashboards</li>
+                <li>Automated reports</li>
+              </ul>
             </div>
-            <h3>InsightAI Analytics</h3>
-            <p>
-              AI-powered business intelligence platform that provides predictive
-              analytics and automated insights from your data.
-            </p>
-            <ul style="text-align: left; margin-top: 1rem">
-              <li>Predictive modeling</li>
-              <li>Real-time analytics</li>
-              <li>Custom dashboards</li>
-              <li>Automated reports</li>
-            </ul>
-          </div>
-          <div class="product-card fade-in">
-            <div class="product-icon">
-              <i class="fas fa-lock"></i>
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h3>SecureGuard Suite</h3>
+              <p>
+                Complete cybersecurity solution with threat detection,
+                vulnerability assessment, and automated incident response.
+              </p>
+              <ul style="text-align: left; margin-top: 1rem">
+                <li>Threat detection</li>
+                <li>Vulnerability scanning</li>
+                <li>Incident response</li>
+                <li>Compliance reporting</li>
+              </ul>
             </div>
-            <h3>SecureGuard Suite</h3>
-            <p>
-              Complete cybersecurity solution with threat detection,
-              vulnerability assessment, and automated incident response.
-            </p>
-            <ul style="text-align: left; margin-top: 1rem">
-              <li>Threat detection</li>
-              <li>Vulnerability scanning</li>
-              <li>Incident response</li>
-              <li>Compliance reporting</li>
-            </ul>
           </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="products-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn" id="products-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="carousel-dots" id="products-dots"></div>
         </div>
       </div>
     </section>
@@ -325,34 +368,35 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title fade-in">Get In Touch</h2>
-        <p class="fade-in" style="font-size: 1.2rem; margin-bottom: 2rem">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
           Ready to transform your business? Let's discuss your project and
           create something amazing together.
         </p>
+
         <div class="contact-info">
-          <div class="contact-item fade-in">
+          <div class="contact-item">
             <div class="contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
             <h3>Email</h3>
             <p>info@wurkloop.com<br />contact@globalinnovativetech.com</p>
           </div>
-          <div class="contact-item fade-in">
+          <div class="contact-item">
             <div class="contact-icon">
               <i class="fas fa-phone"></i>
             </div>
             <h3>Phone</h3>
-            <p>+91 9797055883<br />+91 9086425139</p>
+            <p>+91 9797055883<br />+1 (555) 987-6543</p>
           </div>
-          <div class="contact-item fade-in">
+          <div class="contact-item">
             <div class="contact-icon">
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h3>Office</h3>
-            <p>Srinagar, J&K - India</p>
+            <p>Srinagar, J&K<br />India</p>
           </div>
-          <div class="contact-item fade-in">
+          <div class="contact-item">
             <div class="contact-icon">
               <i class="fas fa-clock"></i>
             </div>
@@ -370,7 +414,7 @@
           &copy; 2025 Global Innovative Tech Private Ltd (Wurkloop). All rights
           reserved.
         </p>
-        <p>Transforming businesses through innovation and technology.</p>
+        <p>Wurkloop is the brand of Global Innovative Tech Private Ltd</p>
       </div>
     </footer>
 
