@@ -74,6 +74,14 @@ nav.scrolled {
   text-decoration: none;
   transition: all 0.3s ease;
   letter-spacing: -0.02em;
+  /* background-color: red; */
+  display: grid;
+  place-content: center;
+}
+
+.logo img {
+  width: auto;
+  height: 40px;
 }
 
 .logo:hover {
@@ -824,6 +832,12 @@ footer p:last-child {
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero h1 {
