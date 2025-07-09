@@ -11,16 +11,6 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   background: #000000;
-  animation: fade-in 1s ease;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* Animated Background */
@@ -843,7 +833,7 @@ footer p:last-child {
   .nav-links {
     display: none;
   }
-
+  
   .nav-container {
     display: flex;
     justify-content: center;
