@@ -51,12 +51,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-nav.scrolled {
-  /* background: rgba(0, 0, 0, 0.95); */
-  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-  transform: translateY(0);
-}
-
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -65,7 +59,6 @@ nav.scrolled {
   align-items: center;
   padding: 0 2rem;
 }
-
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
@@ -93,6 +86,7 @@ nav.scrolled {
   display: flex;
   list-style: none;
   gap: 2.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -122,6 +116,27 @@ nav.scrolled {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+.highlighted-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(176, 144, 251, 0.1);
+  border: 1px solid rgba(139, 92, 246, 1);
+  border-radius: 8px;
+  color: #8b5cf6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.highlighted-btn:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -833,7 +848,7 @@ footer p:last-child {
   .nav-links {
     display: none;
   }
-  
+
   .nav-container {
     display: flex;
     justify-content: center;
