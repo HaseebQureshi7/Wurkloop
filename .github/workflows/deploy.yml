@@ -24,5 +24,6 @@ jobs:
           script: |
             cd domains;
             cd wurkloop.com;
-            cd public_html
-            mkdir Test_Folder_For_CICD
+            cd public_html;
+            rm -rf *;
+            git clone --depth=1 https://github.com/HaseebQureshi7/Wurkloop .;
