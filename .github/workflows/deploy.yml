@@ -24,6 +24,5 @@ jobs:
           script: |
             cd domains;
             cd wurkloop.com;
-            cd public_html;
-            rm -rf *;
-            git clone --depth=1 https://github.com/HaseebQureshi7/Wurkloop .;
+            rm -rf public_html;
+            git clone --depth=1 https://github.com/HaseebQureshi7/Wurkloop public_html;
