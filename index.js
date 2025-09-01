@@ -94,7 +94,8 @@ class Carousel {
     }
 
     if (this.prevBtn) this.prevBtn.disabled = this.currentIndex === 0;
-    if (this.nextBtn) this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+    if (this.nextBtn)
+      this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
   }
 
   goToSlide(index) {
@@ -104,7 +105,10 @@ class Carousel {
 
   next() {
     if (this.currentIndex < this.maxIndex) {
-      this.currentIndex = Math.min(this.currentIndex + this.cardsToShow, this.maxIndex);
+      this.currentIndex = Math.min(
+        this.currentIndex + this.cardsToShow,
+        this.maxIndex
+      );
       this.updateCarousel();
     }
   }
@@ -190,7 +194,7 @@ class TeamCarousel {
     this.createDots();
     this.updateCarousel();
     this.bindEvents();
-    this.startAutoPlay();
+    // this.startAutoPlay();
     this.animateCards();
   }
 
@@ -232,7 +236,8 @@ class TeamCarousel {
     }
 
     if (this.prevBtn) this.prevBtn.disabled = this.currentIndex === 0;
-    if (this.nextBtn) this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+    if (this.nextBtn)
+      this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
     this.updateVisibleCards();
   }
 
@@ -249,21 +254,25 @@ class TeamCarousel {
   goToSlide(index) {
     this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
     this.updateCarousel();
-    this.restartAutoPlay();
+    // this.restartAutoPlay();
   }
 
   next() {
-    this.currentIndex = this.currentIndex >= this.maxIndex ? 0 :
-      Math.min(this.currentIndex + this.cardsToShow, this.maxIndex);
+    this.currentIndex =
+      this.currentIndex >= this.maxIndex
+        ? 0
+        : Math.min(this.currentIndex + this.cardsToShow, this.maxIndex);
     this.updateCarousel();
-    this.restartAutoPlay();
+    // this.restartAutoPlay();
   }
 
   prev() {
-    this.currentIndex = this.currentIndex <= 0 ? this.maxIndex :
-      Math.max(this.currentIndex - this.cardsToShow, 0);
+    this.currentIndex =
+      this.currentIndex <= 0
+        ? this.maxIndex
+        : Math.max(this.currentIndex - this.cardsToShow, 0);
     this.updateCarousel();
-    this.restartAutoPlay();
+    // this.restartAutoPlay();
   }
 
   startAutoPlay() {
@@ -285,7 +294,7 @@ class TeamCarousel {
     if (this.prevBtn) this.prevBtn.addEventListener("click", () => this.prev());
     if (this.track) {
       this.track.addEventListener("mouseenter", () => this.stopAutoPlay());
-      this.track.addEventListener("mouseleave", () => this.startAutoPlay());
+      // this.track.addEventListener("mouseleave", () => this.startAutoPlay());
     }
     this.addTouchSupport();
     this.addKeyboardSupport();
@@ -293,7 +302,9 @@ class TeamCarousel {
 
   addTouchSupport() {
     if (!this.track) return;
-    let startX = 0, startY = 0, isDragging = false;
+    let startX = 0,
+      startY = 0,
+      isDragging = false;
     this.track.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
@@ -334,9 +345,24 @@ class TeamCarousel {
 
 let servicesCarousel, projectsCarousel, productsCarousel, teamCarousel;
 function initCarousels() {
-  servicesCarousel = new Carousel("services-track", "services-prev", "services-next", "services-dots");
-  projectsCarousel = new Carousel("projects-track", "projects-prev", "projects-next", "projects-dots");
-  productsCarousel = new Carousel("products-track", "products-prev", "products-next", "products-dots");
+  servicesCarousel = new Carousel(
+    "services-track",
+    "services-prev",
+    "services-next",
+    "services-dots"
+  );
+  projectsCarousel = new Carousel(
+    "projects-track",
+    "projects-prev",
+    "projects-next",
+    "projects-dots"
+  );
+  productsCarousel = new Carousel(
+    "products-track",
+    "products-prev",
+    "products-next",
+    "products-dots"
+  );
   teamCarousel = new TeamCarousel();
 }
 

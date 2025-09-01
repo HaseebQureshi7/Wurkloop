@@ -1279,6 +1279,57 @@ footer p:last-child {
   font-size: 0.9rem;
 }
 
+/* Footer socials (small icons centered) */
+footer .footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;              /* tight gap for small icons */
+  margin-bottom: 30px;    /* space above the disclaimer text */
+}
+
+footer .footer-socials .social-link {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  color: #c7c9d1;         /* subtle neutral */
+  text-decoration: none;
+  font-size: 25px;        /* small icon size */
+  transition: all 0.25s ease;
+}
+
+/* Hover brand accents */
+footer .footer-socials .social-link.linkedin:hover {
+  color: #0a66c2;
+  border-color: rgba(10, 102, 194, 0.5);
+  background: rgba(10, 102, 194, 0.12);
+}
+
+footer .footer-socials .social-link.github:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+footer .footer-socials .social-link.twitter:hover {
+  color: #1da1f2;
+  border-color: rgba(29, 161, 242, 0.5);
+  background: rgba(29, 161, 242, 0.12);
+}
+
+/* Respect your dark footer spacing on small screens */
+@media (max-width: 480px) {
+  footer .footer-socials {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+}
+
 /* Animations */
 @keyframes teamFloat {
   0%, 100% { 
